@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+  <ion-footer class="header" no-border>
+    <ion-footer class="orb" no-border>
+      <ion-img class="orb-img" src="../../../assets/images/button-orb.gif" (click)="purchaseOrbs()"></ion-img>
+      <ion-label class="orb-text" color="light">{{ user.orb }} Orbs</ion-label>
+    </ion-footer>
+  </ion-footer>
+  <ion-footer class="body" no-border>
+    <ion-footer class="dialog-alert" no-border>
+      <ion-label class="box-text" color="success">Prize Box</ion-label>
+      <br/>
+      <br/>
+      <ion-label class="box-text1" color="light">Play Station 4 + 3 Games</ion-label>
+      <br/>
+      <ion-label class="box-text1" color="warning">or</ion-label>
+      <br/>
+      <ion-label class="box-text1" color="light">400$</ion-label>
+    </ion-footer>
+    <ion-footer class="box" no-border>
+      <ion-img class="orb-img" src="../../../assets/images/boxanimada.gif"></ion-img>
+    </ion-footer>
+  </ion-footer>
+  <ion-footer class="footer" no-border>
+    <ion-button class="bottom-button" color="primary" (click)="participateRaffle()"><ion-icon name="log-in" color="light"></ion-icon> Join (One orb)</ion-button>
+  </ion-footer>
+</div>

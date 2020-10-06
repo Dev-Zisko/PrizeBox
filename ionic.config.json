@@ -1,0 +1,7 @@
+{
+  "name": "prizebox",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,36 @@
+
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-footer no-border>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-footer no-border *ngIf="p.title != 'Log out'">
+              <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+                <ion-icon color="light" slot="start" [name]="p.icon"></ion-icon>
+                <ion-label color="light">
+                  {{p.title}}
+                </ion-label>
+              </ion-item>
+            </ion-footer> 
+            <ion-footer no-border *ngIf="p.title == 'Log out'">
+              <ion-item (click)="logout()">
+                <ion-icon color="light" slot="start" [name]="p.icon"></ion-icon>
+                <ion-label color="light">
+                  {{p.title}}
+                </ion-label>
+              </ion-item>
+            </ion-footer> 
+          </ion-menu-toggle>
+        </ion-footer>
+        <ion-img class="logo-end" src="../../../assets/images/logo.png"></ion-img>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
